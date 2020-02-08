@@ -204,6 +204,25 @@ direction: 'rtl' (default to `ltr`)
 
 You will need both `data-simplebar-direction='rtl'` and a css rule with `direction: rtl`.
 
+#### timeout
+
+Define the delay until the scrollbar hides. Has no effect if `autoHide` is `false`.
+
+Default value is `1000`.
+
+#### clickOnTrack
+
+Controls the click on track behaviour.
+
+Default to `true`.
+
+#### scrollbarMinSize / scrollbarMaxSize
+
+Controls the min and max size of the scrollbar in `px`.
+
+Default for `scrollbarMinSize` is `25`.
+Default for `scrollbarMaxSize` is `0` (no max size).
+
 ### Apply scroll vertically only
 
 Simply define in css `overflow-x: hidden` on your element.
@@ -246,7 +265,7 @@ const simpleBar = new SimpleBar(document.getElementById('myElement'));
 simpleBar.getContentElement();
 ```
 
-### Disable Mutation Observer
+### Disable Mutation Observer (core package only)
 
 ```js
 SimpleBar.removeObserver();
